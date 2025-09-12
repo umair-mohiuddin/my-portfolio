@@ -1,0 +1,278 @@
+:root {
+    --bg-color: #212428;
+    --secondary-color: white;
+    --primary-color: rgb(0, 157, 255);
+    --t-time: 0.3s linear all;
+}
+
+header {
+    background-color: var(--bg-color);
+    box-shadow: 0px 0px 3px var(--primary-color);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo-img {
+    height: 50px;
+}
+
+.nav-link {
+    color: var(--secondary-color) !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0px !important;
+    margin: 10px;
+    width: fit-content !important;
+    position: relative;
+    text-transform: capitalize;
+}
+
+.nav-link::before {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 2px;
+    bottom: 0px;
+    background-color: var(--primary-color);
+    transition: var(--t-time);
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+    transition: var(--t-time);
+}
+
+.nav-link:hover::before {
+    width: 100%;
+    transition: var(--t-time);
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: end;
+    width: 98%;
+    gap: 30px;
+}
+.navbar-toggler{
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.navbar-toggler:hover{
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+main{
+    background-image: linear-gradient(135deg, black, var(--bg-color));
+    color: var(--secondary-color);
+}
+section{
+    padding: 16px !important;
+}
+
+#intro {
+    /* background-image: linear-gradient(315deg, black, var(--bg-color)); */
+    padding-top: 100px !important;
+    justify-items: center;
+    align-content: center;
+}
+
+.main-text {
+    color: var(--primary-color) !important;
+    font-size: clamp(32px, 5vw, 60px);
+}
+
+.para1 {
+    color: var(--secondary-color) !important;
+    font-size: clamp(16px, 3vw, 32px);
+    margin-bottom: 0;
+}
+.para1:nth-of-type(1){
+    width: fit-content;
+    border-bottom: 1px solid var(--primary-color);
+}
+.cta{
+    display: flex;
+    margin: 10px 0px;
+    gap: 30px;
+}
+.my-btn{
+    background-color: var(--primary-color);
+    color: black;
+    text-decoration: none;
+    padding:5px 10px ;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: clamp(14px, 1.5vw, 18px);
+    border: 2px solid var(--primary-color);
+    transition: var(--t-time);
+}
+.cta .my-btn:nth-of-type(2){
+    background-color: transparent;
+    color: var(--primary-color);
+}
+.my-btn:hover{
+    box-shadow: 0px 0px 10px var(--primary-color);
+    transition: var(--t-time);
+}
+
+#features{
+    /* background-image: linear-gradient(225deg, black, var(--bg-color)); */
+    color: white ;
+}
+
+.f-col{
+   padding: 10px; 
+}
+.f-col a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.098);
+    transition: var(--t-time);
+    height: 280px;
+    align-content: center;
+    display: block;
+}
+.f-img{
+    filter: invert();
+    width: 75px;
+    margin: 0px 0px 10px 0px;
+}
+.f-icon{
+    height: 0px;
+    font-size: 32px;
+    opacity: 0;
+    display: none;
+}
+.f-col:hover a{
+    background-image: linear-gradient(225deg, black, var(--bg-color));
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+    transition: var(--t-time);
+}
+.f-col:hover .f-icon{
+    height: 30px;
+    opacity: 1;
+    transition: var(--t-time);
+    display: block;
+}
+.text-overflow{
+    position: absolute;
+    bottom: 0px;
+    padding: 12px 12px 8px !important;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.p-col{
+    border: 1px solid rgba(255, 255, 255, 0.098);
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.p-btn{
+    width: 100%;
+    border-radius: 0px;
+    color: var(--bg-color);
+    background-color:white;
+    border: 2px solid rgba(255, 255, 255);
+}
+.p-col:hover{
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+.p-col:hover .p-btn{
+    color: white;
+    background-color: transparent;
+    box-shadow: none;
+}
+.form-input .col{
+    position: relative;
+    margin:  0px;
+    padding: 5px;
+}
+
+.form-input input{
+    width: 100%;
+    background-color: transparent;
+    margin: 5px 0px;
+    padding: 5px;
+    border: 2px solid var(--bg-color);
+    color: var(--secondary-color);
+    outline: none;
+}
+
+.form-input textarea{
+    width: 100%;
+    height: 290px;
+    background-color: transparent;
+    margin: 5px 0px;
+    padding: 5px;
+    border: 2px solid var(--bg-color);
+    color: var(--secondary-color);
+    outline: none;
+}
+.form-input input:focus, .form-input textarea:focus{
+    border: 2px solid var(--primary-color);
+}
+.form-input input[type ='submit']{
+    background-color: transparent;
+    color: var(--secondary-color);
+    transition: var(--t-time);
+}
+.form-input input[type ='submit']:hover{
+    
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    transition: var(--t-time);
+}
+footer{
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    text-align: center;
+    margin: 0px;
+    padding: 8px;
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.s-icon{
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(15px, 3vw, 30px);
+}
+.s-icon a{
+    color: var(--secondary-color);
+    width: clamp(40px, 6vw, 50px);
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: clamp(20px, 4vw, 26px);
+    padding: 8px !important;
+    border-radius: 4px;
+    background-image: linear-gradient(135deg, rgb(0, 0, 0), var(--bg-color));
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+.s-icon a:hover{
+    background-image: linear-gradient(135deg, var(--bg-color), rgb(0, 0, 0));
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: 0px 0px 5px var(--primary-color);
+    transition: var(--t-time);
+}
+
+@media screen and (max-width: 768px){
+    .row .position-relative{
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+    .text-overflow{
+        position: static;
+        background-color: transparent       ;
+    }
+}
